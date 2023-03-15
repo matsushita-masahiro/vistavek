@@ -23,6 +23,7 @@
  }
  
  header{
+     height: 70px;
      width: 100vw;
      position: fixed;
      right: 0;
@@ -31,6 +32,7 @@
      background: #8080801c;
      transition: 0.3s;
  }
+ 
  .header-container{
      height: 70px;
  }
@@ -116,9 +118,10 @@
    background: #8080801c;
    opacity: 0;
    transform: translate(200%, -70px);
-   height: 2000px;
+   height: 0px;
    transition: 0.7s;
    padding: 20px 0 20px 5%;
+   
 }
 
 .hidden ul {
@@ -192,7 +195,7 @@
     display: block;
     position: absolute;
     top: 0px;
-    left: calc( 100% - 10px );
+    left: calc( 100% - 8vw );
    }
    
    .sp-menu #open {
@@ -220,7 +223,7 @@
      background: #fff;
      /*bottom: 0;*/
      /*right: 0;*/
-     height: 2000px;
+     height: 100vh;
      right: 0;
      text-align: left;
      opacity: 1;
