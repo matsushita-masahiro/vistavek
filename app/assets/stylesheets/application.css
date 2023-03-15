@@ -32,13 +32,16 @@ header > ul {
     padding-left: 0;
     margin: 0 auto;
     width: 800px;
-    display: grid;
-    grid-template-columns: repeat(5, 160px);
+    display: flex;
+    justify-content: space-around;
+    /*display: grid;*/
+    /*grid-template-columns: repeat(6, 130px);*/
 }
 
 header > ul > li {
     list-style: none;
     line-height: 80px;
+    width: 130px;
 }
 
 header > ul > li > a {

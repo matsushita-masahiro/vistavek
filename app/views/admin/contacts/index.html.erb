@@ -1,0 +1,43 @@
+<div id="contact-index">
+    <h3 class="my-reserved-title">お問合せ一覧</h3>
+    
+        <table class="table table-bordered table-striped contacts-table">
+          <thead>
+            <tr>
+              <th scope="col" class="col-xs-3 col-sm-3 col-md-3 col-lg-3">名前/メール</th>
+              <th scope="col" class="col-xs-3 col-sm-3 col-md-3 col-lg-3">お問合せ内容</th>
+              <th scope="col" class="col-xs-3 col-sm-3 col-md-3 col-lg-3">回答</th>
+              <th scope="col" class="col-xs-3 col-sm-3 col-md-3 col-lg-3">処理</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @contacts.each do |contact| %>
+               <tr>
+                  <td class="col-xs-3 col-sm-3 col-md-3 col-lg-3 center">
+                    <%= contact.name %><br>
+                    <%= contact.email %>
+                  </td>
+                  <td class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                     <%= link_to contact.content, new_admin_contact_answer_path(contact)  %><br><br>
+                     <%= contact.created_at.strftime("%Y/%m/%d %H:%M") %>
+                  </td>
+                  <td class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                    <% i = 0 %>
+                    <% Answer.where(contact_id: contact.id).each do |answer| %>
+                        <% if i > 0 %>
+                          <p>----------------</p>
+                        <% end %>  
+                        <% i += 1 %>
+                      <%= answer.answer %><br>
+                      <%= answer.created_at.strftime("%Y/%m/%d %H:%M") %>
+                    <% end %>
+                  </td>
+                  <td class="col-xs-3 col-sm-3 col-md-3 col-lg-3 center">
+                    <%= button_to "削除", admin_contact_path(contact), method: :delete, class: "btn btn-danger", data: { confirm: "【確認】問合せ・回答を削除します" }%>
+                  </td>            
+               </tr>
+            <% end %>
+          </tbody>
+        </table>
+        <%= paginate @contacts %>
+</div>

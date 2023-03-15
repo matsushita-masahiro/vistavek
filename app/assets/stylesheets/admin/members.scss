@@ -1,0 +1,167 @@
+// Place all the styles related to the admin/members controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+#members-new {
+    width: 80%;
+    margin: 50px auto;
+    
+    h3 {
+        text-align: center;
+    }
+    
+    .submit-row {
+        text-align: center;
+        margin: 20px 0;
+        
+        .submit-btn {
+            width: 100px;
+            height: 50px;
+            background: #00bcd4b5;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+        }
+        
+        .submit-btn:hover {
+            opacity: 0.7;
+            color: #000;
+        }
+    }
+}
+
+#members-new table {
+    margin: 0 auto;
+    padding: 5px 20px; 
+    border: 1px solid #000;
+    border-radius: 5px;
+    
+    th, td {
+        border-bottom: 1px dashed #000;
+        padding: 10px 0;
+        
+        .input_field {
+            width: 100%;
+            border-radius: 3px;
+            box-sizing: border-box;
+            height: 30px;
+            border: 0.7px solid #000;
+        }
+        
+        .border-none {
+            border: none;
+        }
+        
+        br {
+            display: none;
+        }
+    }
+    
+    .th-last, .td-last {
+        border-bottom: none;
+    }
+    
+    th {
+        border-right: dashed 1px #ooo;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #members-new table {
+        th {
+            
+            font-size: 13px;
+            width: 60px;
+            br {
+                display: block;
+            }
+        }
+    }
+}
+
+
+// index 
+
+#members-index {
+    width: 80%;
+    margin: 50px auto;
+}
+
+#members-index > p.title {
+    font-family: 'Encode Sans Condensed', sans-serif;
+    color: rgb(183,114,49); 
+    letter-spacing: 1px;
+    font-size: 3rem;
+}
+
+#members-index .word {
+    padding-left: 30px;
+}
+
+#members-index .members-area {
+    padding-top: 50px;
+}
+
+#members-index .members-area article {
+    padding: 50px 0;
+    display: grid;
+    grid-template-columns: 15% 70%;
+    column-gap: 10%;
+    border-bottom: 1px solid #80808052;
+    // font-size: 1.2vw;
+}
+
+#members-index .members-area article .infomation {
+    padding: 0 0 0 10px;
+}
+
+#members-index .icon img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+
+#members-index .members-area article .infomation .name-kanji {
+    padding: 5px 0 0 0;
+    font-size: 1.2rem;
+}
+
+#members-index .members-area article .infomation .name-kanji .last-name {
+    padding: 0 0 0 10px;
+}
+
+#members-index .members-area article .infomation .name-eng {
+    display: inline-block;
+    padding: 0 0 5px 30px;
+    font-size: 1rem;
+}
+
+#members-index .members-area article .infomation .title {
+    padding: 10px 0;
+}
+
+#members-index .members-area article .infomation .title > span {
+    display: inline-block;
+    width: 120px;
+}
+
+#members-index .members-area article .infomation .other-info {
+    display: grid;
+    grid-template-columns: 13% 13% 35% 35%;
+}
+
+
+
+#members-index .members-area article .infomation .other-info div {
+    padding: 10px 0;
+}
+
+
+#members-index .members-area article .infomation .other-info .headline {
+    font-size: 1.2rem;
+}
+
+
+
+

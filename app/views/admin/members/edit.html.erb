@@ -1,0 +1,55 @@
+<div id="members-new">
+<h3>Member登録</h3>
+<%= form_with model: @member, url: admin_member_path(@member), method: :patch do |f| %>
+    <table class="member-new">
+      <tbody>
+        <tr>
+          <th scope="col">氏名<br>（漢字）</th>
+          <td>性<%= f.text_field :last_name_kanji, class: "input_field" %></td>
+          <td>名<%= f.text_field :first_name_kanji, class: "input_field" %></td>
+        </tr>
+         <tr>
+          <th scope="col">氏名<br>（英語）</th>
+          <td>last：<%= f.text_field :last_name, class: "input_field" %></td>
+          <td>first：<%= f.text_field :first_name, class: "input_field" %></td>          
+        </tr>
+         <tr>
+          <th scope="col">役職</th>
+          <td colspan="2"><%= f.text_field :title, class: "input_field" %></td>
+        </tr>
+         <tr>
+          <th scope="col">干支</th>
+          <td colspan="2"><%= f.select :zodiac, Member.zodiac_list, { include_blank: '選択してください'}, { class: 'input_field-control' , required: true } %></td>
+        </tr>
+         <tr>
+          <th scope="col">星座</th>
+          <td colspan="2"><%= f.select :constellation, Member.constellation_list, { include_blank: '選択してください'}, { class: 'input_field-control' , required: true } %></td>
+        </tr>
+         <tr>
+          <th scope="col">資格</th>
+          <td colspan="2"><%= f.text_field :qualification, class: "input_field" %></td>
+        </tr>
+        <tr>
+          <th scope="col">趣味</th>
+          <td colspan="2"><%= f.text_field :hobby, class: "input_field" %></td>
+        </tr>
+        <tr>
+          <th scope="col">一言</th>
+          <td colspan="2"><%= f.text_field :comment, class: "input_field" %></td>
+        </tr>
+        <tr>
+          <th scope="col" class="th-last">写真</th>
+          <td colspan="2" class="td-last"><%= f.file_field :icon, accept: 'image/*', class: "input_field border-none" %></td>
+        </tr>
+      </tbody>
+    </table>
+ <div class="submit-row"><%= f.submit "更新", class: "submit-btn" %></div>
+<% end %>
+    
+    
+    
+
+     
+
+
+</div>

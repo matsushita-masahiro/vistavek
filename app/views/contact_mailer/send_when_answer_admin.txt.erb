@@ -1,0 +1,13 @@
+
+     様からのお問合せに対する回答
+      名前：<%= @contact.name %>
+      メール：<%= @contact.email %>
+      内容：<%= simple_format(@contact.content) %>
+      日時：<%= @contact.created_at.strftime("%Y/%m/%d %H:%M") %>
+      ----------------
+      回答：<%= simple_format(@answer.answer) %>
+      ---------------------------------
+      m☆COSMIC 事務局
+      HP : https://www.vistavek.com
+      email : matsushita.samurai@gmail.com
+      ---------------------------------

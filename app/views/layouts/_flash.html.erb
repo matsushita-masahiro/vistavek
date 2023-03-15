@@ -1,0 +1,20 @@
+<div class="flash">
+  <% flash.each do |key, value| %>
+    <div class="alert <%= bs4_bgcolor_for(key) %>">
+      <%= value %>
+      <button id="close" class="flash-close" data-dismiss="alert">x</button>
+    </div>
+  <% end %>
+</div>
+
+<script>
+
+      const close = document.getElementById('close');
+      const flash = document.querySelector('.flash');
+      if(close != null) {
+          close.addEventListener('click', () => {
+              flash.style.display = "none";
+          });
+      };
+  
+</script>

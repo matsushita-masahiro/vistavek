@@ -1,0 +1,25 @@
+<div id="members-index">
+    <p class="title">Members</p>
+    <div class="word">Time Plannerとして同じ考えの元、ファイナンシャルプランナーオフィスのメンバーとして活動しています。</div>
+    
+    <section class="members-area">
+      <% @members.each do |m| %> 
+        <article>
+            <div class="icon"><%= link_to edit_admin_member_path(m) do %><img src="<%= m.icon.present? ? "/image/members/#{m.icon}" : "/image/members/no-image.png" %>"><% end %></div>
+            <div class="infomation">
+                <div class="name-kanji"><%= m.last_name_kanji %><span class="last-name"><%= m.first_name_kanji %></span><span class="name-eng"><%= m.first_name %><%= m.last_name %></span></div>
+                <!--<div class="name-eng">Koki Aizen</div>-->
+                <div class="title"><%= m.qualification %>　｜　<%= m.comment %></div>
+                <div class="other-info">
+                    <div class="zodiac"><div class="headline">干支</div><div><%= Member.zodiac_list.key(m.zodiac) %></div></div>
+                    <div class="constellation"><div class="headline">星座</div><div><%= Member.constellation_list.key(m.constellation) %></div></div>
+                    <div class="qualification"><div class="headline">資格</div><div><%= m.qualification %></div></div>
+                    <div class="hobby"><div class="headline">趣味</div><div><%= m.hobby %></div></div>
+                </div>
+            </div>
+        </article>      
+    <% end %>
+    </section>
+  
+</div>
+
