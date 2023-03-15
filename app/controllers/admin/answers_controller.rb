@@ -1,14 +1,15 @@
 class Admin::AnswersController < ApplicationController
   
- before_action :get_contact
+ before_action :get_contact, only: [:new, :create]
 
   def new
     @answer = Answer.new(contact_id: @contact.id)
+    @answers = @contact.answers.order(created_at: :desc)
   end
   
   def create
     @answer = Answer.new(answer_params)
-    @contact = Contact.find(@answer.contact_id)
+    # @contact = Contact.find(@answer.contact_id)
     logger.debug("======================== answer create @contact.email = #{@contact.email}")
     @answer.user_id = current_user.id
     

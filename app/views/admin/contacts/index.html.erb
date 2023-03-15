@@ -1,39 +1,39 @@
 <div id="contact-index">
     <h3 class="my-reserved-title">お問合せ一覧</h3>
     
-        <table class="table table-bordered table-striped contacts-table">
+        <table class="contacts-table">
           <thead>
             <tr>
-              <th scope="col" class="col-xs-3 col-sm-3 col-md-3 col-lg-3">名前/メール</th>
-              <th scope="col" class="col-xs-3 col-sm-3 col-md-3 col-lg-3">お問合せ内容</th>
-              <th scope="col" class="col-xs-3 col-sm-3 col-md-3 col-lg-3">回答</th>
-              <th scope="col" class="col-xs-3 col-sm-3 col-md-3 col-lg-3">処理</th>
+              <th scope="col" class="name-email">名前/メール</th>
+              <th scope="col" class="content">お問合せ内容</th>
+              <th scope="col" class="answer">回答</th>
+              <th scope="col" class="action">処理</th>
             </tr>
           </thead>
           <tbody>
             <% @contacts.each do |contact| %>
                <tr>
-                  <td class="col-xs-3 col-sm-3 col-md-3 col-lg-3 center">
+                  <td class="name-email">
                     <%= contact.name %><br>
                     <%= contact.email %>
                   </td>
-                  <td class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                  <td class="content">
                      <%= link_to contact.content, new_admin_contact_answer_path(contact)  %><br><br>
                      <%= contact.created_at.strftime("%Y/%m/%d %H:%M") %>
                   </td>
-                  <td class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                  <td class="answer">
                     <% i = 0 %>
-                    <% Answer.where(contact_id: contact.id).each do |answer| %>
+                    <% contact.answers.order(created_at: :desc).each do |answer| %>
                         <% if i > 0 %>
-                          <p>----------------</p>
+                          <p>--------------------------------------------</p>
                         <% end %>  
                         <% i += 1 %>
-                      <%= answer.answer %><br>
+                      <%= simple_format(answer.answer) %><br>
                       <%= answer.created_at.strftime("%Y/%m/%d %H:%M") %>
                     <% end %>
                   </td>
-                  <td class="col-xs-3 col-sm-3 col-md-3 col-lg-3 center">
-                    <%= button_to "削除", admin_contact_path(contact), method: :delete, class: "btn btn-danger", data: { confirm: "【確認】問合せ・回答を削除します" }%>
+                  <td class="action contact-delete-button">
+                    <%= button_to "削除", admin_contact_path(contact), method: :delete, class: "", data: { confirm: "【確認】問合せ・回答を削除します" }%>
                   </td>            
                </tr>
             <% end %>

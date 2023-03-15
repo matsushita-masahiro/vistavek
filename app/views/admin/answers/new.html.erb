@@ -1,39 +1,53 @@
-<div class="container">
-<h3>お問合せへの回答</h3>
-
-  <div class="field name">
-    氏名<br />
-    <p><%= @contact.name %></p>
-  </div>
-
-  <div class="field">
-    メール<br />
-    <p><%= @contact.email %></p>
-  </div>
+<div id="answer-new">
+  <h3>お問合せへの回答</h3>
   
-  <div class="field">
-    お問合せ日時<br />
-    <p><%= @contact.created_at.strftime("%Y/%m/%d %H:%M") %></p>
-  </div>
+    <table class="answer-content">
+      <tbody>
+        <tr>
+          <th>氏名</th>
+          <td><%= @contact.name %></td>
+        </tr>
+        <tr>
+          <th>メール</th>
+          <td><%= @contact.email %></td>
+        </tr>
+        <tr>
+          <th>お問合せ日時</th>
+          <td><%= @contact.created_at.strftime("%Y/%m/%d %H:%M") %></td>
+        </tr>
+        <tr>
+          <th>内容</th>
+          <td><%= simple_format(@contact.content) %></td>
+        </tr>
+      </tbody>
+    </table>
     
-  <div class="field">
-    内容<br />
-    <p><%= @contact.content %></p>
-  </div>
+    
+   <%= form_with model: [@contact, @answer], url: admin_contact_answers_path(@contact) do |f| %>
   
- <%= form_with model: [@contact, @answer], url: admin_contact_answers_path(@contact) do |f| %>
+        <%= f.hidden_field :contact_id, :value => @contact.id %>
+  
+        <div class="field name">
+          <%= f.label :回答（こちらで入力した内容がお客様に送信されます）%><br />
+          <%= f.text_area :answer, required: true, :class => "form-text-area", autocomplete: 'name' %>
+        </div>
+       
+        <div class="actions">
+          <%= f.submit "回答する", data: { confirm: "回答してOKですか？"}, class:"answer-submit-button" %>
+        </div>
+  　<% end %>
 
-      <%= f.hidden_field :contact_id, :value => @contact.id %>
 
-      <div class="field name">
-        <%= f.label :回答 %><br />
-        <%= f.text_area :answer, :size => "20x10", required: true, :class => "form-control my-form", autocomplete: 'name' %>
+
+    <hr>
+      <h3>過去の回答</h3>
+      <div class="past-answer">
+        <% @answers.each do |answer| %>
+          <%= simple_format(answer.answer) %>
+          <%= answer.created_at.strftime("%Y/%m/%d %H:%M") %>
+          <div>-------------------------</div>
+        <% end %>
       </div>
-     
-      <div class="actions">
-        <%= f.submit "回答する", data: { confirm: "回答してOKですか？"}, class:"btn btn-primary" %>
-      </div>
-　<% end %>
 
 
 </div>

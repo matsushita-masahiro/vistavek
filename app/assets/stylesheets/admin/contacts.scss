@@ -10,8 +10,57 @@
 
 #contact-index .contacts-table {
     width: 100%;
+    border: 1px solid #000;
+    border-collapse: collapse;
+    table-layout: fixed;
+    word-wrap: break-word;
     
     th, td {
-        border: 1px solid #000;
+        border: 1px dashed #000;
     }
+}
+
+        
+.contact-delete-button  {
+    text-align: center;
+}
+
+
+@media screen and (max-width: 768px) {
+    
+    #contact-index {
+        width: 90%;
+        margin: 50px auto;
+    }
+
+    
+    #contact-index .contacts-table {
+        .name-email {
+            width: 20%;
+            // overflow-x: scroll;
+            
+        }
+        .content {
+            width: 32%;
+            overflow: scroll;
+        }
+        .answer {
+            width: 33%;
+            overflow: scroll;
+        }  
+        
+        .action {
+            width: 15%;
+            overflow: scroll;
+        }
+        
+        .contact-delete-button  {
+            text-align: center;
+            
+            font-size: 10px;
+        }
+        
+        
+    }
+    
 }
