@@ -16,9 +16,8 @@
  
   body{
      margin: 0;
-     padding: 0;
-     height: 1000px;
-     overflow: hidden;
+     /*height: 1000px;*/
+     /*overflow: hidden;*/
      position: relative;
  }
  
@@ -143,26 +142,26 @@
 /*hidden end ----------------------*/
 
 /*footer ------------------*/
- footer{
-  margin-top: 200px;
-  height: 50px;
-  background: #DDDDDD;
- }
+ /*footer{*/
+ /* margin-top: 200px;*/
+ /* height: 50px;*/
+ /* background: #DDDDDD;*/
+ /*}*/
  
- .footer-container{
-  margin: 0 auto;
-  width: 70%;
-  height: 50px;
- }
+ /*.footer-container{*/
+ /* margin: 0 auto;*/
+ /* width: 70%;*/
+ /* height: 50px;*/
+ /*}*/
  
- .footer-container span{
-  float: right;
-  line-height: 50px;
-  font-size: 13px;
- }
- .smart-menu-header{
-  display: none;
- }
+ /*.footer-container span{*/
+ /* float: right;*/
+ /* line-height: 50px;*/
+ /* font-size: 13px;*/
+ /*}*/
+ /*.smart-menu-header{*/
+ /* display: none;*/
+ /*}*/
  
  
  @media (max-width: 768px) { 
