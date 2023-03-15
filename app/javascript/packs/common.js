@@ -15,10 +15,15 @@ window.addEventListener('scroll', ()=> {
 });
 
 const toggle = document.querySelector(".toggle");
+const toggleClose = document.querySelector(".toggle-close");
 const overlay = document.getElementById("overlay");
+const body = document.querySelector("body");
 
 toggle.addEventListener('click', () => {
-    toggle.classList.toggle('active');
+    // toggle.classList.toggle('active');
+    toggleClose.classList.toggle('toggle');
+    toggleClose.classList.toggle('active');
     overlay.classList.toggle('hidden');
     overlay.classList.toggle('sp-overlay');
+    body.classList.toggle('mask');
 });
