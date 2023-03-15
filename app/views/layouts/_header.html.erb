@@ -1,15 +1,44 @@
-<header>
-    <!--<div></div>-->
-    <ul>
-        <li><a href="/">TOP</a></li>
-        <li><a href="#">Our Services</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="/members">Members</a></li>
-        <li><a href="/contacts/new">Contact</a></li>
-        <% if user_signed_in? %>
-          <li><%= link_to 'Logout', logout_path, method: :delete, style: "color: red;" %></li>
-        <% end %>
-    </ul>
-    <!--<div></div>-->
+<header id="header">
+    <!-- pc -->
+    <div class="header-container">
+        <ul>
+            <li><a href="/">TOP</a></li>
+            <li><a href="#">Our Services</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="/members">Members</a></li>
+            <li><a href="/contacts/new">Contact</a></li>
+            <% if user_signed_in? %>
+              <li><%= link_to 'Logout', logout_path, method: :delete, style: "color: red;" %></li>
+            <% end %>
+        </ul>
+    </div>
+    <!-- sp -->
+    <div class="smart-menu-header">
+        <div class="sp-menu">
+            <div class="toggle">
+            　　<span></span>
+            　　<span></span>
+            　　<span></span>
+            </div>
+        </div>
+    </div>
+   
 </header>
+  <!--<div class="overlay-area">-->
+    <div id="overlay" class="hidden">
+        <!--<span class="material-icons" id="close">close</span>-->
+        <ul>
+            <li><a href="/">TOP</a></li>
+            <li><a href="#">Our Services</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="/members">Members</a></li>
+            <li><a href="/contacts/new">Contact</a></li>
+            <% if user_signed_in? %>
+              <li><%= link_to 'Logout', logout_path, method: :delete, style: "color: red;" %></li>
+            <% end %>
+        </ul>
+    </div> 
+  <!--</div>-->
+
+<%= javascript_pack_tag 'common' %>
     
