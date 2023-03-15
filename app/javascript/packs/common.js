@@ -27,3 +27,12 @@ toggle.addEventListener('click', () => {
     overlay.classList.toggle('sp-overlay');
     body.classList.toggle('mask');
 });
+
+
+toggleClose.addEventListener('click', () => {
+    toggleClose.classList.toggle('toggle');
+    toggleClose.classList.toggle('active');
+    overlay.classList.toggle('hidden');
+    overlay.classList.toggle('sp-overlay');
+    body.classList.toggle('mask');
+});

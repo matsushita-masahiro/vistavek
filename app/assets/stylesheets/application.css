@@ -190,7 +190,7 @@
    .sp-menu {
      /*float: right;*/
     display: block;
-    position: fixed;
+    position: absolute;
     top: 0px;
     left: calc( 100% - 10px );
    }
@@ -225,10 +225,11 @@
      text-align: left;
      opacity: 1;
      transform: translate(10%, -70px);
-     pointer-events: none;
+     /*pointer-events: none;*/
      transition: 0.7s;
      width: 87%;
      padding: 20px 0 20px 15%;
+     position: relative;
      z-index: 100;
    }
    
@@ -239,7 +240,7 @@
    }
    
    .sp-overlay #close {
-     position: fixed;
+     position: absolute;
      top: 16px;
      right: 16px;
      font-size: 32px;
