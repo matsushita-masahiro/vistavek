@@ -16,4 +16,420 @@
 
 }
 
+// top page
+
+.slider {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+
+// about page
+
+
+.home-about-text{
+    margin: 0 auto;
+    width: 740px;
+}
+
+.home-about-text ul li{
+    list-style: none;
+}
+.home-about-text ul {
+    padding:0;
+}
+
+
+
+.home-about-text ul li{
+    margin-top: 30px;
+   
+}
+
+.home-about-text ul li p{
+    line-height: 38px; 
+    opacity: 0.7;
+}
+.home-about-text ul li span{
+    font-weight: bold;
+    letter-spacing: 2px;
+    
+}
+
+.home-about-ul{
+    margin-top: 100px;
+}
+
+.home-about-last-text{
+    margin: 0 auto;
+    margin-top: 200px;
+    width: 740px;
+}
+
+.home-about-last-text h1{
+    font-size: 38px;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.home-about-last-text h1 span{
+    border-bottom: 3px solid #000;
+    padding-bottom: 20px;
+}
+
+.home-about-last-text p{
+    text-align: center;
+    letter-spacing: 3px;
+    margin-top: 40px;
+}
+
+.home-about-table{
+    margin-top: 170px;
+}
+
+.home-about-table h1{
+    font-size: 40px;
+    text-align: center;
+    font-weight: normal;
+}
+
+.home-about-table table{ 
+    margin: auto;
+}
+
+.home-about-table table tr td {
+    border-bottom: 3px solid #d3d3d3;
+    padding-top: 20px;
+    opacity: 0.6;
+}
+
+.home-about-table table tr{
+   border-bottom: 3px solid #d3d3d3; 
+}
+
+.td-one{
+    padding-right: 20px;
+}
+
+.td-two {
+    padding-right: 30px;
+}
+
+.td-two ul li{
+    padding: 0;
+    margin: 0;
+}
+
+
+.post-time-profit {
+    background: url("/image/home/redsugar201025937.webp") no-repeat;
+    margin: 0 auto;
+    margin-top: 60px;
+    background-size: 80vw;
+    height: 400px;
+    width: 80vw;
+    opacity: 0.7;
+}
+
+.post-profit-text{
+    padding-top: 40px;
+}
+.post-profit-text h1{
+    letter-spacing: 18px;
+    text-align: center;
+    color: #fff;
+    font-size: 65px;
+}
+
+.post-saving-text{
+  padding-top: 50px;  
+}
+
+.post-saving-text h1{
+    letter-spacing: 10px;
+    text-align: center;
+    color: #fff;
+    font-size: 70px;
+}
+
+.post-saving-text h1 span{
+  color: rgb(247, 223, 141);  
+}
+
+
+
+.post-profit-text h1 span{
+    color: rgb(247, 223, 141);
+}
+
+.post-saving{
+    background: url("/image/home/KUMAKICHI1027610.webp") no-repeat;
+    margin: 0 auto;
+    margin-top: 60px;
+    background-size: 80vw;
+    height: 400px;
+    width: 80vw;
+    opacity: 0.7;
+}
+
+.post-view-more-cover{
+    height: 350px;
+    margin-top: 70px;
+    // background: #000;
+}
+
+.post-view-more-cover ul {
+    padding-left: 0;
+}
+
+
+
+.view-more-li-flex{
+    display: flex;
+    width: 80vw;
+    margin: 0 auto;
+}
+
+.view-more-image{
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    object-fit: cover;
+    height: 350px;
+}
+
+.view-more-image-cover{
+   width: 65%;  
+}
+
+.view-more-li-text{
+  width: 35%; 
+  background: #000;
+  box-sizing: border-box; 
+  text-align: center;
+}
+
+
+.view-more-li-text p {
+    color: #fff;
+    width: 170px;
+    font-weight: normal;
+}
+
+.view-more-li-text .view-more-link {
+    text-align: center;
+    margin: 20px 0 0 0
+}
+
+.view-more-li-text a {
+    width: 100px;
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    text-decoration: none;
+    line-height: 30px;
+    font-size: 13px;
+    font-family: 'Oswald', sans-serif;
+}
+
+// .view-more-li-text a:hover{
+//     color: #000;
+//     background: #fff;
+// }
+
+.view-more-li-text a span{
+    display: inline-block;
+    padding: 10px 20px;
+    transition: 0.8s;
+    font-size: 12px;
+}
+.view-more-li-text a span:hover{
+    color: #000;
+    background: #fff; 
+    border-radius: 7px;
+}
+
+.view-more-li-text p{
+    margin: 150px auto 0;
+    font-size: 1.6rem;
+    // margin-top: 100px;
+    // // margin-left: 100px;
+    // margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+
+.post-view-more-cover ul{
+    display: flex;
+    width: 200vw;
+    // transform: translateX(-100vw);
+}
+
+// .post-view-more-cover ul.left{
+//     transform: translateX(-100vw);
+// }
+
+// .post-view-more-cover ul.right{
+//     transform: translateX(100vw);
+// }
+
+
+.view-more-li-flex li {
+    width: 100vw;
+    // margin: 0 10vw;
+    
+}
+
+.post-view-more-cover{
+    overflow: hidden;   
+}
+
+.arrow {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+}
+
+.arrow::before {
+  content: '';
+  width: 25px;
+  height: 25px;
+  border-top: solid 1px #fff;
+  border-right: solid 1px #fff;
+  position: absolute;
+  left: 10px;
+  top: 8px;
+}
+
+.arrow.arrow-left::before {
+  transform: rotate(-135deg);
+}
+
+.arrow.arrow-right::before {
+  transform: rotate(45deg);
+}
+
+#prev,
+#next {
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+}
+
+#prev {
+  left: 60px;
+}
+
+#next {
+  right: 50px;
+}
+
+.post-view-more-cover{
+    // position: relative;
+}
+
+.section-container{
+    height: 414px;
+    // background: #00FFFF;
+    margin-top: 100px;
+}
+
+
+
+
+.post-index-section-text{
+    width: 600px;
+    margin: 0 auto;
+}
+.post-index-section-text h1{
+    font-size: 33px;
+    letter-spacing: 4px;
+    font-weight: normal;
+    width: 520px;
+    text-align: center;
+    padding-top: 120px;
+}
+
+.post-index-section-text h1 span{
+    border-bottom: 3px solid #808080;
+    padding-bottom: 15px;
+}
+
+.post-index-section-text p{
+    line-height: 30px;
+    font-weight: normal;
+    padding-top: 20px;
+    width: 516px;
+}
+
+.view-btn{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.view-btn a{
+    outline: 3px solid #fff;
+    text-decoration: none;
+    color: #000;
+    transition: 0.8s;
+}
+.view-btn a span{
+    display: inline-block;
+    padding: 8px 20px;
+    transition: 0.8s;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.8s;
+}
+
+.view-btn a:hover{
+  outline: 3px solid #000;
+}
+
+.view-btn a span:hover{
+  background: #fff;  
+}
+
+.sliders-ul {
+    transition: 1s;
+}
+
+span.arrow-left {
+    transition: 0.3s;
+    opacity: 1;
+}
+
+span.arrow-left.hidden {
+    opacity: 0;
+}
+
+
+span.arrow-right {
+    transition: 0.3s;
+    opacity: 1;
+}
+
+span.arrow-right.hidden {
+    opacity: 0;
+}
+
+// about us
+
+#about {
+    width: 70%;
+    margin: 100px auto;
+}
+
+#about p.title {
+    font-family: 'Encode Sans Condensed', sans-serif;
+    color: rgb(183,114,49); 
+    letter-spacing: 1px;
+    font-size: 3rem;    
+}
+
 

@@ -6,10 +6,8 @@ const header = document.getElementById('header');
 window.addEventListener('scroll', ()=> {
     let y = window.pageYOffset;
     if( y >= 400 ) {
-        console.log("400超え");
         header.style.transform = "translateY(-70px)";
     } else {
-        console.log("400未満");
         header.style.transform = "translateY(0px)";
     }
 });

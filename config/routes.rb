@@ -32,5 +32,6 @@ Rails.application.routes.draw do
   resources :contacts, only: [:new, :create]
   resources :members, only: [:index]
   resources :services, only: [:index]
+  get 'about' => 'home#about'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
