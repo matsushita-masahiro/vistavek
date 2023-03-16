@@ -1,0 +1,91 @@
+// Place all the styles related to the services controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com
+
+#services-index {
+    width: 65%;
+    margin: 100px auto;
+}
+
+
+.home-service-text{
+    display: block;
+    // margin-top: 130px;
+}
+
+.home-service-text .title{
+    font-family: 'Encode Sans Condensed', sans-serif;
+    color: rgb(183,114,49); 
+    letter-spacing: 1px;
+    font-size: 3rem;
+}
+
+.home-service-main-text{
+  margin-top: 110px;  
+}
+.home-service-main-text h1{
+   font-weight: normal; 
+   font-size: 30px;
+}
+
+.home-service-main-nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 50px 0;
+}
+
+.service-area {
+    width: 20vw;
+}
+
+.service-image{
+    width: 20vw;
+    height: 14.64vw;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.service-image:hover{
+    opacity: 0.7;
+    background: rgb(183,114,49); 
+}
+
+.home-service-main-nav div h2{
+    display: block;
+    font-weight: normal;
+    margin: 0;
+    color: rgb(183,114,49); 
+
+}
+
+.home-service-main-nav span{
+    font-size: 13px;
+    opacity: 0.6;
+}
+
+@media screen and (max-width: 768px) {
+    
+    #services-index {
+        width: 80%;
+        margin: 100px auto;
+    }
+    
+    .home-service-main-nav{ 
+        display: block;
+    }
+    
+    .service-area {
+        width: 100%;
+        margin: 0 0 50px 0;
+    }
+    
+    .service-image{
+        width: 80vw;
+        height: 58.56vw;
+        object-fit: cover;
+        transition: 0.5s;
+    }
+    
+    
+    
+}
