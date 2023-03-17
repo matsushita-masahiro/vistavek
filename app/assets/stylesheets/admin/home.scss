@@ -6,6 +6,15 @@
     width: 70%;
     margin: 100px auto;
     
+    ul {
+        text-align: center;
+    }
+    
+    ul > li {
+        list-style: none;
+        padding: 0 0 10px 0;
+    }
+    
     ul > li > a {
        font-size: 20px;
        text-decoration: none;
@@ -14,4 +23,26 @@
         ul > li > a:hover {
             opacity: 0.7;
         }
+        
+    table {
+        width: 300px;
+        margin: 0 auto;
+        font-size: 1.2rem;
+        color: #000;
+        
+        th {
+            width: 50px;
+        }
+        
+        td {
+            width: 250px;
+            a {
+                text-decoration: none;
+            }
+            a:hover {
+                opacity: 0.7;
+            }           
+            
+        }
+    }
 }

@@ -9,6 +9,7 @@
             <li><a href="/contacts/new">Contact</a></li>
             <% if user_signed_in? %>
               <li><%= link_to 'Logout', logout_path, method: :delete, style: "color: red;" %></li>
+              <li><a href="/admin/top" style="color: red;">Admin</a></li>
             <% end %>
         </ul>
     </div>
@@ -41,6 +42,7 @@
             <li><a href="/contacts/new">Contact</a></li>
             <% if user_signed_in? %>
               <li><%= link_to 'Logout', logout_path, method: :delete, style: "color: red;" %></li>
+              <li><a href="/admin/top" style="color: red;">Admin</a></li>
             <% end %>
         </ul>
     </div>    

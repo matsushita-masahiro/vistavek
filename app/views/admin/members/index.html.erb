@@ -8,7 +8,7 @@
     <section class="members-area">
       <% @members.each do |m| %> 
         <article>
-            <div class="icon"><%= link_to edit_admin_member_path(m) do %><img src="<%= m.icon.present? ? "/image/members/#{m.icon}" : "/image/members/no-image.png" %>"><% end %></div>
+            <div class="admin icon"><%= link_to edit_admin_member_path(m) do %><img src="<%= m.icon.present? ? "/image/members/#{m.icon}" : "/image/members/no-image.png" %>"><% end %></div>
             <div class="infomation">
                 <div class="name-kanji"><%= m.last_name_kanji %><span class="last-name"><%= m.first_name_kanji %></span><span class="first-name-eng"><%= m.first_name %></span><span class="last-name-eng"><%= m.last_name %></span></div>
                 <!--<div class="name-eng">Koki Aizen</div>-->

@@ -12,7 +12,7 @@
     
     .submit-row {
         text-align: center;
-        margin: 20px 0;
+        margin: 20px 10% 0 10%;
         
         .submit-btn {
             width: 100px;
@@ -29,6 +29,23 @@
         }
     }
 }
+
+
+#members-new .member-delete {
+    margin: 20px 0 0 0;
+    text-align: center;
+    
+    .member-delete-submit-button {
+        width: 100px;
+        height: 40px;
+        line-height: 40px;
+        background: #f44336;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+    }
+}
+
 
 #members-new table {
     margin: 0 auto;
@@ -146,6 +163,11 @@
     object-fit: cover;
 }
 
+// admin hover for edit
+#members-index .admin.icon img:hover {
+    opacity: 0.7;
+}
+
 
 #members-index .members-area article .infomation .name-kanji {
     padding: 5px 0 0 0;
@@ -203,6 +225,8 @@
     opacity: 1;
     transform: none;
 }
+
+// admin member index member delete
 
 
 @media screen and (max-width: 768px) {

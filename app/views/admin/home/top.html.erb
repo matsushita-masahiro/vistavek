@@ -1,6 +1,14 @@
 <div id="admin-top">
-    <ul>
-        <li><%= link_to "Member管理", admin_members_path %></li>
-        <li><%= link_to "お問合せ管理", admin_contacts_path %></li>
-    </ul>
+    <table>
+        <tbody>
+            <tr>
+                <th>1.</th>
+                <td><%= link_to "Members一覧", admin_members_path %></td>
+            </tr>
+            <tr>
+                <th>2.</th>
+                <td><%= link_to "お問合せ一覧", admin_contacts_path %></td>
+            </tr>            
+        </tbody>
+    </table>
 </div>

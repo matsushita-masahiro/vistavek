@@ -49,7 +49,7 @@ class Admin::MembersController < ApplicationController
             else
                 @member.update(icon: "no-image.png")
             end
-            flash[:notice] = "#{@member.last_name}#{@member.first_name}がMemberに更新されました"
+            flash[:notice] = "#{@member.last_name_kanji}#{@member.first_name_kanji}の情報が更新されました"
             redirect_to admin_members_path            
         else
             logger.debug("--------------- not updated")
@@ -60,10 +60,18 @@ class Admin::MembersController < ApplicationController
     end
     
     def index
-        @members = Member.all.order(created_at: :desc)
+        @members = Member.all.order(updated_at: :desc)
     end
 
     def destroy
+        logger.debug("=================== member destroy")
+        if @member.destroy
+            flash[:notice] = "Memberを削除しました"
+            redirect_to admin_members_path
+        else
+            flash[:error] = "Memberを削除できませんでした"
+            redirect_to edit_admin_member_path(@member)
+        end
     end
     
     private
