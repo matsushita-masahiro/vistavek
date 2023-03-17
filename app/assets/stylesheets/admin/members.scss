@@ -126,14 +126,18 @@
 #members-index .members-area article {
     padding: 50px 0;
     display: grid;
-    grid-template-columns: 15% 70%;
-    column-gap: 10%;
+    grid-template-columns: 150px 70%;
+    column-gap: 30px;
     border-bottom: 1px solid #80808052;
     // font-size: 1.2vw;
 }
 
 #members-index .members-area article .infomation {
     padding: 0 0 0 10px;
+}
+
+#members-index .icon img {
+    width: 150px;
 }
 
 #members-index .icon img {
