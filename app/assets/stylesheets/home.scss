@@ -469,3 +469,15 @@ span.arrow-right.hidden {
 }
 
 
+@media screen and (max-width: 650px) {
+    
+    .section-container{
+        height: calc( 414px + ( 1440px - 100vw)/6 );
+        // background: #00FFFF;
+        margin-top: 100px;
+        background: #add8e652;
+    }    
+    
+}
+
+
