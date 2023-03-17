@@ -1,5 +1,5 @@
 
-console.log("================= common.js");
+// console.log("================= common.js");
 
 const header = document.getElementById('header');
 
