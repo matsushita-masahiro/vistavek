@@ -303,9 +303,16 @@ span.arrow-right {
   margin: 0 10px;
   border-right: 4px solid #fff;
   border-bottom: 4px solid #fff;
-  transform: translate(85vw, -210px) rotate(-45deg);
+  transform: translate(83vw, -210px) rotate(-45deg);
   z-index: 2;
 }
+
+@media screen and (max-width: 768px) {
+  span.arrow-right {
+    transform: translate(77vw, -210px) rotate(-45deg);
+  }
+}
+
 
 
 
