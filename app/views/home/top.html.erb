@@ -1,28 +1,16 @@
 <!--<main>-->
-<div class="container">
-    <div class="post-time-profit">
-        <div class="post-profit-text">
-            <h1>
-                <span>T</span>IME
-            </h1>
-            <h1>
-                <span>P</span>ROFIT
-            </h1>
-        </div>
-    </div>
-    <div class="post-saving">
-        <div class="post-saving-text">
-            <h1>S
-                <span>A</span>
-                V
-                <span>I</span>
-                N
-                <span>G</span>
-            </h1>
-        </div>
+
+<div class="top-images">
+    <img id="top-image-1" src="/image/home/top_1.jpg" class="top-image">
+    <img id="top-image-2" src="/image/home/top_2.jpg" class="top-image">
+    <img id="top-image-3" src="/image/home/top_3.png" class="top-image">
+    <div id="top-word" class="words">
+        Vistavek
+        <!--<div class="word">VISTAVEK</div>-->
     </div>
 </div>
-<div class="container">
+  
+<div class="top-container">
     <div class="post-view-more-cover">
             <ul id="sliders-ul" class="sliders-ul">
                 <li class="view-more-li-flex">
@@ -35,7 +23,7 @@
                         </div>
                     </div>
                     <div class="view-more-image-cover">
-                        <img src="/image/home/afbe224.png" class="view-more-image">
+                        <img src="/image/home/company_img.png" class="view-more-image">
                     </div>
                 </li>
                 <li class="view-more-li-flex">
@@ -48,33 +36,33 @@
                         </div>
                     </div>
                     <div class="view-more-image-cover">
-                        <img src="/image/home/cb2a3.png" class="view-more-image">
+                        <img src="/image/home/personal_img.png" class="view-more-image">
                     </div>
                 </li> 
                 </ul>
                 <span class="arrow-left"></span>
                 <span class="arrow-right hidden"></span>
     </div>
-</div>
+
 
 <!--</main>-->
 
-<section>
-    <div class="section-container">
-        <div class="post-index-section-text">
-            <p class="title">​時間と利益の<span>設</span>計を大切に。</p>
-            <p class="word">
-                株式会社Vistavekは、世の中に正直に、お金と時間の設計サービスを<br>提供する複数のTime Plannerにより活動しています。
-                <br>
-                今の時代に合った手法を自ら実践し、リードしていきます。
-            </p>
-            <div class="view-btn">
-                        <%= link_to about_path do %>
-                            VIEW MORE
-                        <%end%>
+    <section>
+        <div class="section-container">
+            <div class="post-index-section-text">
+                <p class="title">​時間と利益の<span>設</span>計を大切に。</p>
+                <p class="word">
+                    株式会社Vistavekは、世の中に正直に、お金と時間の設計サービスを<br>提供する複数のTime Plannerにより活動しています。
+                    <br>
+                    今の時代に合った手法を自ら実践し、リードしていきます。
+                </p>
+                <div class="view-btn">
+                            <%= link_to about_path do %>
+                                VIEW MORE
+                            <%end%>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-
+    </section>
+</div>
 <%= javascript_pack_tag 'home' %>
