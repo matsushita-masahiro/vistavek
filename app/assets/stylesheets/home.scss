@@ -54,18 +54,18 @@
 
 
 
-@keyframes smooth-fadein-out {
-  0% {opacity: 0;}
-  25% {opacity: 1;}
-  50% {opacity: 0;}
-  100% {opacity: 1;}
-}
+// @keyframes smooth-fadein-out {
+//   0% {opacity: 0;}
+//   25% {opacity: 1;}
+//   50% {opacity: 0;}
+//   100% {opacity: 1;}
+// }
 
 .top-images div.words {
     position: absolute;
     display: block;
     top: calc( 50vh - 72px );
-    left: calc( 50vw - 112px );
+    left: calc( 50vw - 100px );
     text-align: center;
     font-size: 3rem;
     color: #fff;
