@@ -64,7 +64,7 @@
 .top-images div.words {
     position: absolute;
     display: block;
-    top: calc( 50vh - 72px );
+    top: calc( 50vh - 100px );
     left: calc( 50vw - 130px );
     text-align: center;
     font-size: 3rem;
@@ -528,7 +528,7 @@ span.arrow-right.hidden {
     // top slider
     
     .post-view-more-cover {
-        height: 550px;
+        height: 350px;
         margin-top: 0;
     }
     
