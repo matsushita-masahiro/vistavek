@@ -45,6 +45,12 @@
      justify-content: space-evenly;
  }
  
+ .logo {
+   height: 50px;
+   padding: 10px 0 10px 20px;
+   float: left;
+ }
+ 
  .header-container ul li{
      list-style: none;
  }
@@ -166,6 +172,8 @@
  .smart-menu-header{
   display: none;
  }
+ 
+
  
  
  @media (max-width: 768px) { 
