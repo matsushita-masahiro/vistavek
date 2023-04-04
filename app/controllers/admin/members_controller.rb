@@ -60,7 +60,7 @@ class Admin::MembersController < ApplicationController
     end
     
     def index
-        @members = Member.all.order(updated_at: :desc)
+        @members = Member.all.order(display_order: :asc)
     end
 
     def destroy
@@ -77,7 +77,7 @@ class Admin::MembersController < ApplicationController
     private
       def member_params
           params.require(:member).permit(:last_name,:first_name,:last_name_kanji,:first_name_kanji,
-                                         :title,:comment,:zodiac,:constellation,:qualification,:hobby,:icon)
+                                         :title,:comment,:zodiac,:constellation,:qualification,:hobby,:icon, :display_order)
       end
       
       def get_member

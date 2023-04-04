@@ -10,7 +10,7 @@
         <article>
             <div class="admin icon"><%= link_to edit_admin_member_path(m) do %><img src="<%= m.icon.present? ? "/image/members/#{m.icon}" : "/image/members/no-image.png" %>"><% end %></div>
             <div class="infomation">
-                <div class="name-kanji"><%= m.last_name_kanji %><span class="last-name"><%= m.first_name_kanji %></span><span class="first-name-eng"><%= m.first_name %></span><span class="last-name-eng"><%= m.last_name %></span></div>
+                <div class="name-kanji"><%= m.last_name_kanji %><span class="last-name"><%= m.first_name_kanji %></span><span class="first-name-eng"><%= m.first_name %></span><span class="last-name-eng"><%= m.last_name %></span><span>(<%= m.display_order %>)</span></div>
                 <!--<div class="name-eng">Koki Aizen</div>-->
                 <div class="title"><span><%= m.title %></span><span>｜</span><span><%= m.comment %></span></div>
                 <div class="other-info">
