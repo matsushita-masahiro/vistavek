@@ -13,11 +13,14 @@ class Admin::MembersController < ApplicationController
 
         if @member.save
             
-            logger.debug("--------------- saved")
             if member_params[:icon].present?
                 icon = member_params[:icon]
                 @member.update(icon: "#{@member.id}.png")
-                File.binwrite("public/image/members/#{@member.icon}", icon.read)
+                if Rails.env.production?
+                  File.binwrite("public/image/members/#{@member.icon}", icon.read)
+                elsif Rails.env.development?
+                  File.binwrite("public/image/members/dev/#{@member.icon}", icon.read)
+                end
             else
                 @member.update(icon: "no-image.png")
             end            
@@ -43,7 +46,11 @@ class Admin::MembersController < ApplicationController
             if member_params[:icon].present?
                 icon = member_params[:icon]
                 @member.update(icon: "#{@member.id}.png")
-                File.binwrite("public/image/members/#{@member.icon}", icon.read)
+                if Rails.env.production?
+                  File.binwrite("public/image/members/#{@member.icon}", icon.read)
+                elsif Rails.env.development?
+                  File.binwrite("public/image/members/dev/#{@member.icon}", icon.read)
+                end
             elsif @member.icon != "no-image.png"
                 @member.update(icon: "#{@member.id}.png")
             else
@@ -65,7 +72,13 @@ class Admin::MembersController < ApplicationController
 
     def destroy
         logger.debug("=================== member destroy")
+        member = @member
         if @member.destroy
+            if Rails.env.production?
+              File.delete("public/image/members/#{member.icon}")
+            elsif Rails.env.development?
+              File.delete("public/image/members/dev/#{member.icon}")
+            end
             flash[:notice] = "Memberを削除しました"
             redirect_to admin_members_path
         else
