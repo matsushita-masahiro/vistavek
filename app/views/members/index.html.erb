@@ -9,7 +9,7 @@
         <article class="animate slide-from-right">
             <% if Rails.env.production? %>
               <div class="icon"><img src="<%= m.icon.present? ? "/image/members/#{m.icon}" : "/image/members/no-image.png" %>"></div>
-            <%  elsif Rails.env.development? %>
+            <% elsif Rails.env.development? %>
               <div class="icon"><img src="<%= m.icon.present? ? "/image/members/dev/#{m.icon}" : "/image/members/no-image.png" %>"></div>
             <% end %>
             <div class="infomation">

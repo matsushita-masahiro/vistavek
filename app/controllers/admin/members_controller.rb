@@ -15,7 +15,8 @@ class Admin::MembersController < ApplicationController
             
             if member_params[:icon].present?
                 icon = member_params[:icon]
-                @member.update(icon: "#{@member.id}.png")
+                ext = File.extname(icon.original_filename)
+                @member.update(icon: "#{@member.id}#{ext}")
                 if Rails.env.production?
                   File.binwrite("public/image/members/#{@member.icon}", icon.read)
                 elsif Rails.env.development?
@@ -45,7 +46,8 @@ class Admin::MembersController < ApplicationController
         if @member.update(member_params)
             if member_params[:icon].present?
                 icon = member_params[:icon]
-                @member.update(icon: "#{@member.id}.png")
+                ext = File.extname(icon.original_filename)
+                @member.update(icon: "#{@member.id}#{ext}")
                 if Rails.env.production?
                   File.binwrite("public/image/members/#{@member.icon}", icon.read)
                 elsif Rails.env.development?
