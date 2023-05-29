@@ -60,3 +60,5 @@ gem 'devise'
 gem 'dotenv-rails'
 gem 'kaminari'
 # gem "font-awesome-sass", "~> 6.3.0"
+gem 'carrierwave'
+gem 'fog-aws'

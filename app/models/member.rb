@@ -13,6 +13,8 @@ class Member < ApplicationRecord
     validates :hobby, presence: true
     validates :icon, presence: true
     
+    mount_uploader :icon, ImageUploader
+    
 
     scope :zodiac_list, -> { 
      {

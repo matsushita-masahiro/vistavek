@@ -7,11 +7,7 @@
     <section class="members-area">
       <% @members.each do |m| %> 
         <article class="animate slide-from-right">
-            <% if Rails.env.production? %>
-              <div class="icon"><img src="<%= m.icon.present? ? "/image/members/#{m.icon}" : "/image/members/no-image.png" %>"></div>
-            <% elsif Rails.env.development? %>
-              <div class="icon"><img src="<%= m.icon.present? ? "/image/members/dev/#{m.icon}" : "/image/members/no-image.png" %>"></div>
-            <% end %>
+            <div class="icon"><img src="<%= m.icon.present? ? "#{m.icon}" : "/image/members/no-image.png" %>"></div>
             <div class="infomation">
                 <div class="name-kanji"><%= m.last_name_kanji %><span class="last-name"><%= m.first_name_kanji %></span><span class="first-name-eng"><%= m.first_name %></span><span class="last-name-eng"><%= m.last_name %></span></div>
                 <!--<div class="name-eng">Koki Aizen</div>-->

@@ -41,11 +41,12 @@
             <th scope="col">写真</th>
             <td colspan="2">
                <%= f.file_field :icon, accept: 'image/*', class: "input_field border-none" %>
-               <% if Rails.env.production? %>
-                 <img src="/image/members/<%= @member.icon %>" width="100" height="100">
-               <%  elsif Rails.env.development? %>
-                 <img src="/image/members/dev/<%= @member.icon %>" width="100" height="100">
-               <% end %>
+               <img src="<%= @member.icon %>" width="100" height="100">
+               <!--< if Rails.env.production? %>-->
+               <!--  <img src="/image/members/<= @member.icon %>" width="100" height="100">-->
+               <!--<  elsif Rails.env.development? %>-->
+               <!--  <img src="/image/members/dev/<= @member.icon %>" width="100" height="100">-->
+               <!--< end %>-->
             </td>
           </tr>
           <tr>
